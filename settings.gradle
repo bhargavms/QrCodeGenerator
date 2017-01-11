@@ -1,0 +1,1 @@
+include ':sample', ':zxing_qr_gen', ':library'
