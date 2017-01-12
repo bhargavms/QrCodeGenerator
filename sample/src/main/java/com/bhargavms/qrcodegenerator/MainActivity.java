@@ -1,21 +1,13 @@
 package com.bhargavms.qrcodegenerator;
 
-import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.MultiFormatWriter;
+import com.bhargavms.lib_droid_wrapper.QRImageGenerator;
 import com.google.zxing.WriterException;
-import com.google.zxing.common.BitMatrix;
-
-import static android.graphics.Color.BLACK;
-import static android.graphics.Color.WHITE;
 
 public class MainActivity extends AppCompatActivity {
-    public final static int WIDTH = 400;
-    public final static int HEIGHT = 400;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,34 +16,10 @@ public class MainActivity extends AppCompatActivity {
         String qrString = "blah";
         ImageView imgShowQr = (ImageView) findViewById(R.id.img_show_qr);
         try {
-            imgShowQr.setImageBitmap(encodeAsBitmap(qrString));
+            QRImageGenerator imageGenerator = new QRImageGenerator();
+            imgShowQr.setImageBitmap(imageGenerator.encodeAsBitmap(qrString, 400, 400));
         } catch (WriterException e) {
             e.printStackTrace();
         }
-    }
-
-    Bitmap encodeAsBitmap(String str) throws WriterException {
-        BitMatrix result;
-        try {
-            result = new MultiFormatWriter().encode(str, BarcodeFormat.QR_CODE, WIDTH, HEIGHT, null);
-        } catch (Exception iae) {
-            // Unsupported format
-            iae.printStackTrace();
-            return null;
-        }
-
-        int width = result.getWidth();
-        int height = result.getHeight();
-        int[] pixels = new int[width * height];
-        for (int y = 0; y < height; y++) {
-            int offset = y * width;
-            for (int x = 0; x < width; x++) {
-                pixels[offset + x] = result.get(x, y) ? BLACK : WHITE;
-            }
-        }
-
-        Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
-        bitmap.setPixels(pixels, 0, width, 0, 0, width, height);
-        return bitmap;
     }
 }

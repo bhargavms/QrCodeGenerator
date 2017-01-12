@@ -4,6 +4,7 @@ import android.graphics.Bitmap;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
+import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 
 import static android.graphics.Color.BLACK;
@@ -21,17 +22,10 @@ public class QRImageGenerator {
      * @param preferredHeight the preferred height in pixels of the Generated Bitmap
      * @return the generated QR formatted Bitmap.
      */
-    public Bitmap encodeAsBitmap(String stringToEncode, int preferredWidth, int preferredHeight) {
+    public Bitmap encodeAsBitmap(String stringToEncode, int preferredWidth, int preferredHeight) throws WriterException {
         BitMatrix result;
-        try {
-            result = new MultiFormatWriter()
-                    .encode(stringToEncode, BarcodeFormat.QR_CODE, preferredWidth, preferredHeight, null);
-        } catch (Exception iae) {
-            // Unsupported format
-            iae.printStackTrace();
-            return null;
-        }
-
+        result = new MultiFormatWriter()
+                .encode(stringToEncode, BarcodeFormat.QR_CODE, preferredWidth, preferredHeight, null);
         int width = result.getWidth();
         int height = result.getHeight();
         int[] pixels = new int[width * height];
@@ -41,7 +35,6 @@ public class QRImageGenerator {
                 pixels[offset + x] = result.get(x, y) ? BLACK : WHITE;
             }
         }
-
         Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
         bitmap.setPixels(pixels, 0, width, 0, 0, width, height);
         return bitmap;
