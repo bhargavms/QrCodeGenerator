@@ -1,1 +1,1 @@
-include ':sample', ':lib-zxing', ':lib-droid-wrapper'
+include ':sample', ':lib-zxing-qr-gen', ':lib-droid-qr-gen'

@@ -5,7 +5,7 @@ ext {
     bintrayName = 'lib-zxing-qr-gen'
 
     publishedGroupId = 'com.bhargavms'
-    libraryName = 'LibZxingQrGen'
+    libraryName = 'QrCodeGenerator'
     artifact = 'lib-zxing-qr-gen'
 
     libraryDescription = 'The QR code encoder module taken from ZXING'
@@ -14,6 +14,8 @@ ext {
     gitUrl = 'https://github.com/bhargavms/QrCodeGenerator.git'
 
     libraryVersion = '1.0.0'
+
+    packagingType = 'jar'
 
     developerId = 'bhargavms'
     developerName = 'Bhargav MS'

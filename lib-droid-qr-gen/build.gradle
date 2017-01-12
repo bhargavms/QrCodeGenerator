@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
 
 
 ext {
@@ -15,6 +16,8 @@ ext {
     gitUrl = 'https://github.com/bhargavms/QrCodeGenerator.git'
 
     libraryVersion = '1.0.0'
+
+    packagingType = 'aar'
 
     developerId = 'bhargavms'
     developerName = 'Bhargav MS'
@@ -53,8 +56,9 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.0.1'
-    compile project(':lib-zxing')
+    compile project(':lib-zxing-qr-gen')
     testCompile 'junit:junit:4.12'
 }
+
 apply from: "${rootDir}/install.gradle"
 apply from: "${rootDir}/publish.gradle"
