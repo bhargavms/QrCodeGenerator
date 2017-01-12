@@ -56,3 +56,5 @@ dependencies {
     compile project(':lib-zxing')
     testCompile 'junit:junit:4.12'
 }
+apply from: "${rootDir}/install.gradle"
+apply from: "${rootDir}/publish.gradle"

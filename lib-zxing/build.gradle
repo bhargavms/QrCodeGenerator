@@ -2,11 +2,11 @@ apply plugin: 'java'
 
 ext {
     bintrayRepo = 'maven'
-    bintrayName = 'lib-qr-gen'
+    bintrayName = 'lib-zxing-qr-gen'
 
     publishedGroupId = 'com.bhargavms'
-    libraryName = 'LibQrGen'
-    artifact = 'lib-qr-gen'
+    libraryName = 'LibZxingQrGen'
+    artifact = 'lib-zxing-qr-gen'
 
     libraryDescription = 'The QR code encoder module taken from ZXING'
 
@@ -30,3 +30,6 @@ dependencies {
 
 sourceCompatibility = "1.7"
 targetCompatibility = "1.7"
+
+apply from: "${rootDir}/install.gradle"
+apply from: "${rootDir}/publish.gradle"
