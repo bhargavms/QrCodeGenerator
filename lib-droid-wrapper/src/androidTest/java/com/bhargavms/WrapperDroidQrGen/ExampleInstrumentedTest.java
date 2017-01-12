@@ -1,4 +1,4 @@
-package com.bhargavms.lib_droid_wrapper;
+package com.bhargavms.WrapperDroidQrGen;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

@@ -1,4 +1,4 @@
-package com.bhargavms.lib_droid_wrapper;
+package com.bhargavms.WrapperDroidQrGen;
 
 import org.junit.Test;
 

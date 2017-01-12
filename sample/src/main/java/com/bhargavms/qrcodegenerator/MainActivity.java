@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 
-import com.bhargavms.lib_droid_wrapper.QRImageGenerator;
+import com.bhargavms.WrapperDroidQrGen.QRImageGenerator;
 import com.google.zxing.WriterException;
 
 public class MainActivity extends AppCompatActivity {
