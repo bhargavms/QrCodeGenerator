@@ -1,7 +1,6 @@
 # QrCodeGenerator
 QR code encoding stolen from ZXING, encode strings into QR code bitmaps!
-
-## Module QRImageGenerator:
+## Module `lib-droid-qr-gen`:
 
 ### Adding to your project:
 
@@ -15,14 +14,23 @@ And you're set!
 ### Generating a Bitmap from a QRCode String:
 
 ```java
+QRImageGenerator imageGenerator = new QRImageGenerator();
 try {
-    QRImageGenerator imageGenerator = new QRImageGenerator();
     Bitmap bm = imageGenerator.encodeAsBitmap(qrString, 400, 400);
 } catch (WriterException e) {
-    e.printStackTrace();
+    // TODO: Handle the error.
 }
 ```
 Thats it for now, if you want more features, welll....! request for it by opening an issue right here on the [ISSUES SECTION][1]
 
+## Module `lib-zxing-qr-gen`:
+
+> This is the set of classes taken directly from `ZXING`, only the part that encodes to QR format.
+
+### Adding to your project:
+
+```groovy
+compile 'com.bhargavms:lib-zxing-qr-gen:1.0.0'
+```
 
   [1]: https://github.com/bhargavms/QrCodeGenerator/issues
