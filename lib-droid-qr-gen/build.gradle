@@ -15,7 +15,7 @@ ext {
     siteUrl = 'https://github.com/bhargavms/QrCodeGenerator'
     gitUrl = 'https://github.com/bhargavms/QrCodeGenerator.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.1'
 
     packagingType = 'aar'
 
@@ -37,7 +37,7 @@ android {
         minSdkVersion 9
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.1"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
