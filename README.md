@@ -7,7 +7,7 @@ QR code encoding stolen from ZXING, encode strings into QR code bitmaps!
 Put the below line in the application module's build.gradle file's dependencies block
 
 ```groovy
-compile 'com.bhargavms:lib-droid-qr-gen:1.0.1'
+compile 'com.bhargavms:lib-droid-qr-gen:2.0'
 ```
 And you're set!
 
@@ -30,7 +30,7 @@ Thats it for now, if you want more features, welll....! request for it by openin
 ### Adding to your project:
 
 ```groovy
-compile 'com.bhargavms:lib-zxing-qr-gen:1.0.0'
+compile 'com.bhargavms:lib-zxing-qr-gen:2.0'
 ```
 
   [1]: https://github.com/bhargavms/QrCodeGenerator/issues
