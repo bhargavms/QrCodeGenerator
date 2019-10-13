@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.zxing;
+package com.mogra.zxing;
 
-import com.google.zxing.common.BitMatrix;
-import com.google.zxing.qrcode.QRCodeWriter;
+import com.mogra.zxing.common.BitMatrix;
+import com.mogra.zxing.qrcode.QRCodeWriter;
 
 import java.util.Map;
 

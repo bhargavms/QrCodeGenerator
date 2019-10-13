@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing.qrcode.decoder;
+package com.mogra.zxing.qrcode.decoder;
 
 /**
  * See ISO 18004:2006 Annex D

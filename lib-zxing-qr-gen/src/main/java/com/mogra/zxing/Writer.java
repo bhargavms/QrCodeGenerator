@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.zxing;
+package com.mogra.zxing;
 
-import com.google.zxing.common.BitMatrix;
+import com.mogra.zxing.common.BitMatrix;
 
 import java.util.Map;
 

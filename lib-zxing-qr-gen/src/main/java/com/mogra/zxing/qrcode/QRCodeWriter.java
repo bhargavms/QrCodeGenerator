@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package com.google.zxing.qrcode;
+package com.mogra.zxing.qrcode;
 
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.EncodeHintType;
-import com.google.zxing.Writer;
-import com.google.zxing.WriterException;
-import com.google.zxing.common.BitMatrix;
-import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
-import com.google.zxing.qrcode.encoder.ByteMatrix;
-import com.google.zxing.qrcode.encoder.Encoder;
-import com.google.zxing.qrcode.encoder.QRCode;
+import com.mogra.zxing.BarcodeFormat;
+import com.mogra.zxing.EncodeHintType;
+import com.mogra.zxing.Writer;
+import com.mogra.zxing.WriterException;
+import com.mogra.zxing.common.BitMatrix;
+import com.mogra.zxing.qrcode.decoder.ErrorCorrectionLevel;
+import com.mogra.zxing.qrcode.encoder.ByteMatrix;
+import com.mogra.zxing.qrcode.encoder.Encoder;
+import com.mogra.zxing.qrcode.encoder.QRCode;
 
 import java.util.Map;
 

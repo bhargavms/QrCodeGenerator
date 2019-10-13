@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
 apply plugin: 'com.github.dcendents.android-maven'
 
 
@@ -15,7 +17,7 @@ ext {
     siteUrl = 'https://github.com/bhargavms/QrCodeGenerator'
     gitUrl = 'https://github.com/bhargavms/QrCodeGenerator.git'
 
-    libraryVersion = '1.0.1'
+    libraryVersion = '2.0'
 
     packagingType = 'aar'
 
@@ -30,14 +32,13 @@ ext {
 
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 28
 
     defaultConfig {
-        minSdkVersion 9
-        targetSdkVersion 25
+        minSdkVersion 14
+        targetSdkVersion 28
         versionCode 1
-        versionName "1.0.1"
+        versionName "2.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -51,12 +52,12 @@ android {
 }
 
 dependencies {
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile project(':lib-zxing-qr-gen')
-    testCompile 'junit:junit:4.12'
+    implementation project(':lib-zxing-qr-gen')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
 apply from: "${rootDir}/install.gradle"
 apply from: "${rootDir}/publish.gradle"
+repositories {
+    mavenCentral()
+}

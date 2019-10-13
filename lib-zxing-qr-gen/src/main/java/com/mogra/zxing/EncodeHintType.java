@@ -14,7 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.zxing;
+package com.mogra.zxing;
+
+import com.mogra.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
 /**
  * These are a set of hints that you may pass to Writers to specify their behavior.
@@ -26,7 +28,7 @@ public enum EncodeHintType {
     /**
      * Specifies what degree of error correction to use, for example in QR Codes.
      * Type depends on the encoder. For example for QR codes it's type
-     * {@link com.google.zxing.qrcode.decoder.ErrorCorrectionLevel ErrorCorrectionLevel}.
+     * {@link ErrorCorrectionLevel ErrorCorrectionLevel}.
      * For Aztec it is of type {@link Integer}, representing the minimal percentage of error correction words.
      * For PDF417 it is of type {@link Integer}, valid values being 0 to 8.
      * In all cases, it can also be a {@link String} representation of the desired value as well.

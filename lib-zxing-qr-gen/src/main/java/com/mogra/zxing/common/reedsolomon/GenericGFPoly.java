@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing.common.reedsolomon;
+package com.mogra.zxing.common.reedsolomon;
 
 /**
  * <p>Represents a polynomial whose coefficients are elements of a GF.

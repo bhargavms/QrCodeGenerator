@@ -1,11 +1,12 @@
 package com.bhargavms.qrcodegenerator;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.bhargavms.WrapperDroidQrGen.EncodingException;
 import com.bhargavms.WrapperDroidQrGen.QRImageGenerator;
-import com.google.zxing.WriterException;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,11 +15,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         String qrString = "blah";
-        ImageView imgShowQr = (ImageView) findViewById(R.id.img_show_qr);
+        ImageView imgShowQr = findViewById(R.id.img_show_qr);
         try {
-            QRImageGenerator imageGenerator = new QRImageGenerator();
-            imgShowQr.setImageBitmap(imageGenerator.encodeAsBitmap(qrString, 400, 400));
-        } catch (WriterException e) {
+            imgShowQr.setImageBitmap(QRImageGenerator.encodeAsBitmap(qrString, 400, 400));
+        } catch (EncodingException e) {
             e.printStackTrace();
         }
     }

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing.qrcode.encoder;
+package com.mogra.zxing.qrcode.encoder;
 
 import java.util.Arrays;
 

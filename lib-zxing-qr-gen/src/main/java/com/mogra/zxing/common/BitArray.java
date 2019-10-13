@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing.common;
+package com.mogra.zxing.common;
 
 import java.util.Arrays;
 

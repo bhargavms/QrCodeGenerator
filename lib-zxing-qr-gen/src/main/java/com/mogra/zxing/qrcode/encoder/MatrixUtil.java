@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.google.zxing.qrcode.encoder;
+package com.mogra.zxing.qrcode.encoder;
 
-import com.google.zxing.WriterException;
-import com.google.zxing.common.BitArray;
-import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
-import com.google.zxing.qrcode.decoder.Version;
+import com.mogra.zxing.WriterException;
+import com.mogra.zxing.common.BitArray;
+import com.mogra.zxing.qrcode.decoder.ErrorCorrectionLevel;
+import com.mogra.zxing.qrcode.decoder.Version;
 
 /**
  * @author satorux@google.com (Satoru Takabayashi) - creator

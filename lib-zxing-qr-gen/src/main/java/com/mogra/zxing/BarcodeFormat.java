@@ -1,5 +1,5 @@
 /*
- * Copyright 2008 ZXing authors
+ * Copyright 2007 ZXing authors
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,25 +14,17 @@
  * limitations under the License.
  */
 
-package com.google.zxing;
+package com.mogra.zxing;
 
 /**
- * A base class which covers the range of exceptions which may occur when encoding a barcode using
- * the Writer framework.
+ * Enumerates barcode formats known to this package. Please keep alphabetized.
  *
- * @author dswitkin@google.com (Daniel Switkin)
+ * @author Sean Owen
  */
-public final class WriterException extends Exception {
+public enum BarcodeFormat {
 
-  public WriterException() {
-  }
-
-  public WriterException(String message) {
-    super(message);
-  }
-
-  public WriterException(Throwable cause) {
-    super(cause);
-  }
-
+  /**
+   * QR Code 2D barcode format.
+   */
+  QR_CODE,
 }

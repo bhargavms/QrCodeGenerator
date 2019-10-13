@@ -14,24 +14,25 @@
  * limitations under the License.
  */
 
-package com.google.zxing.qrcode.encoder;
+package com.mogra.zxing;
 
-final class BlockPair {
+/**
+ * A base class which covers the range of exceptions which may occur when encoding a barcode using
+ * the Writer framework.
+ *
+ * @author dswitkin@google.com (Daniel Switkin)
+ */
+public final class WriterException extends Exception {
 
-  private final byte[] dataBytes;
-  private final byte[] errorCorrectionBytes;
-
-  BlockPair(byte[] data, byte[] errorCorrection) {
-    dataBytes = data;
-    errorCorrectionBytes = errorCorrection;
+  public WriterException() {
   }
 
-  byte[] getDataBytes() {
-    return dataBytes;
+  public WriterException(String message) {
+    super(message);
   }
 
-  byte[] getErrorCorrectionBytes() {
-    return errorCorrectionBytes;
+  public WriterException(Throwable cause) {
+    super(cause);
   }
 
 }

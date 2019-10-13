@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.google.zxing.qrcode.encoder;
+package com.mogra.zxing.qrcode.encoder;
 
-import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
-import com.google.zxing.qrcode.decoder.Mode;
-import com.google.zxing.qrcode.decoder.Version;
+import com.mogra.zxing.qrcode.decoder.ErrorCorrectionLevel;
+import com.mogra.zxing.qrcode.decoder.Mode;
+import com.mogra.zxing.qrcode.decoder.Version;
 
 /**
  * @author satorux@google.com (Satoru Takabayashi) - creator

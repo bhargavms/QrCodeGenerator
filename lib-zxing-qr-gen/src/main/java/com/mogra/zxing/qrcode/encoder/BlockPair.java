@@ -1,5 +1,5 @@
 /*
- * Copyright 2007 ZXing authors
+ * Copyright 2008 ZXing authors
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,17 +14,24 @@
  * limitations under the License.
  */
 
-package com.google.zxing;
+package com.mogra.zxing.qrcode.encoder;
 
-/**
- * Enumerates barcode formats known to this package. Please keep alphabetized.
- *
- * @author Sean Owen
- */
-public enum BarcodeFormat {
+final class BlockPair {
 
-  /**
-   * QR Code 2D barcode format.
-   */
-  QR_CODE,
+  private final byte[] dataBytes;
+  private final byte[] errorCorrectionBytes;
+
+  BlockPair(byte[] data, byte[] errorCorrection) {
+    dataBytes = data;
+    errorCorrectionBytes = errorCorrection;
+  }
+
+  byte[] getDataBytes() {
+    return dataBytes;
+  }
+
+  byte[] getErrorCorrectionBytes() {
+    return errorCorrectionBytes;
+  }
+
 }

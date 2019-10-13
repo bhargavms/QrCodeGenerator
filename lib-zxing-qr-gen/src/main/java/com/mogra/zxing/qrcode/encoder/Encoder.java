@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package com.google.zxing.qrcode.encoder;
+package com.mogra.zxing.qrcode.encoder;
 
-import com.google.zxing.EncodeHintType;
-import com.google.zxing.WriterException;
-import com.google.zxing.common.BitArray;
-import com.google.zxing.common.CharacterSetECI;
-import com.google.zxing.common.reedsolomon.GenericGF;
-import com.google.zxing.common.reedsolomon.ReedSolomonEncoder;
-import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
-import com.google.zxing.qrcode.decoder.Mode;
-import com.google.zxing.qrcode.decoder.Version;
+import com.mogra.zxing.EncodeHintType;
+import com.mogra.zxing.WriterException;
+import com.mogra.zxing.common.BitArray;
+import com.mogra.zxing.common.CharacterSetECI;
+import com.mogra.zxing.common.reedsolomon.GenericGF;
+import com.mogra.zxing.common.reedsolomon.ReedSolomonEncoder;
+import com.mogra.zxing.qrcode.decoder.ErrorCorrectionLevel;
+import com.mogra.zxing.qrcode.decoder.Mode;
+import com.mogra.zxing.qrcode.decoder.Version;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
